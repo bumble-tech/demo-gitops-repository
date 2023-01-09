@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: default
+resources:
+- ../../../base/hello-app/bumble-overlay
+
+configMapGenerator:
+- envs:
+  - params.env
+  name: parameters
+
+vars:
+- name: DRAGON_NAME
+  objref:
+    apiVersion: v1
+    kind: ConfigMap
+    name: parameters
+  fieldref:
+    fieldPath: data.DRAGON_NAME
+
+configurations:
+- params.yaml

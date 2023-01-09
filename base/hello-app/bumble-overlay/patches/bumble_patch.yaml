@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: print-greeting
+
+spec:
+  containers:
+  - name: env-print-demo
+    image: bash:latest
+    env:
+      - name: NAME
+        value: $(DRAGON_NAME)
