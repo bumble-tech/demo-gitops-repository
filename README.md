@@ -1,6 +1,6 @@
 # GitOps repository: Two-level overlays
 
-GitOps repository with a dummy application for demonstration purposes. Related to article: [link to article]
+GitOps repository with a dummy application for demonstration purposes. Related to article: https://medium.com/bumble-tech/gitops-for-multi-cluster-k8s-environments-d305431ba6d6
 
 ## Repository structure
 ```shell
